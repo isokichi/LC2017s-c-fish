@@ -12,7 +12,6 @@
 #include <string.h>
 
 /*
-  Function Declarations for builtin shell commands:
  組み込みシェルコマンドの関数宣言：
  */
 int fish_cd(char **args);
@@ -23,7 +22,6 @@ int fish_sakana(char **args);
 
 
 /*
-  List of builtin commands, followed by their corresponding functions.
  組み込みコマンドのリスト。その後に対応する関数が続きます。
  */
 char *builtin_str[] = {
@@ -47,11 +45,11 @@ int fish_num_builtins() {
 }
 
 /*
-  Builtin function implementations.
  組み込み関数の実装。
 */
 
 /**
+    cdの実装
    @brief Builtin command: change directory.
    @param args List of args.  args[0] is "cd".  args[1] is the directory.
    @return Always returns 1, to continue executing.
@@ -69,6 +67,7 @@ int fish_cd(char **args)
 }
 
 /**
+ help
    @brief Builtin command: print help.
    @param args List of args.  Not examined.
    @return Always returns 1, to continue executing.
@@ -89,6 +88,7 @@ int fish_help(char **args)
 }
 
 /**
+ exit
    @brief Builtin command: exit.
    @param args List of args.  Not examined.
    @return Always returns 0, to terminate execution.
